@@ -1,0 +1,1 @@
+prototype是构造函数的显示原型，__proto__ 是每个实例的隐式原型，实例的__proto__ 与其构造函数的prototype指向的是同一个对象

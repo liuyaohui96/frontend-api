@@ -1,0 +1,15 @@
+1. 文字排版的属性
+   * font
+   * word-break
+   * letter-spacing
+   * text-align
+   * text-rendering
+   * word-spacing
+   * white-space
+   * text-indent
+   * text-transform
+   * text-shadow
+2. line-height
+3. color
+4. visibility
+5. cursor

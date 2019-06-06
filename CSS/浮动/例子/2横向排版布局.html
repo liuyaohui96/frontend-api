@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>横向排版布局</title>
+  <style>
+    .green {
+      width: 20%;
+      background-color: green;
+    }
+
+    .red {
+      width: 50%;
+      background-color: red;
+    }
+
+    .blue {
+      width: 30%;
+      background-color: blue;
+    }
+
+    .red,
+    .blue,
+    .green {
+      height: 200px;
+      float: left;
+    }
+
+    .test {
+      height: 50px;
+      background-color: black;
+    }
+
+    .container {
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>横向排版布局</h1>
+  <div class="container">
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+  </div>
+  <div class="test"></div>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+```css
+selector{
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid #ff0000;s
+}
+
+```

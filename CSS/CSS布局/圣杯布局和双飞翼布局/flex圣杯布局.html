@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+  <title>flex 圣杯布局</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    div.header,
+    div.footer {
+      height: 50px;
+      background-color: yellow;
+      line-height: 50px;
+    }
+
+    .container {
+      width: 100%;
+      height: 200px;
+      display: flex;
+    }
+
+    .text {
+      color: #fff;
+      font-size: 40px;
+      text-align: center;
+      line-height: 200px;
+    }
+
+    .left {
+      background-color: red;
+      height: 100%;
+      flex-basis: 100px;
+    }
+
+    .main {
+      background-color: green;
+      height: 100%;
+      flex-grow: 1;
+    }
+
+    .right {
+      background-color: blue;
+      height: 100%;
+      flex-basis: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header text">header</div>
+  <div class="container">
+    <div class="left text">left</div>
+    <div class="main text">main</div>
+    <div class="right text">right</div>
+  </div>
+  <div class="footer text">footeer</div>
+</body>
+
+</html>
