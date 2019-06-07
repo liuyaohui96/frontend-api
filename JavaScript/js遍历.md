@@ -1,5 +1,3 @@
-for in更适合遍历对象，不要使用for in遍历数组
-  - for in遍历的是数组的索引（即键名），而for of遍历的是数组元素值
 
 ## 遍历数组
 forEach fitler find map some every reduce map indexOf lastIndexOf等
@@ -10,8 +8,14 @@ forEach fitler find map some every reduce map indexOf lastIndexOf等
   - ES5的Object.keys(myObject)获取对象的实例属性组成的数组，不包括原型方法和属性
 
 ## for of的使用
-for..of适用遍历 数组对象/字符串/map/set等拥有迭代器对象的集合, 但是不能遍历对象,因为没有迭代器对象
-
+for..of适用遍历 
+  * 数组
+  * 字符串
+  * map
+  * set
+  * 函数的 arguments 对象
+  * NodeList 对象
+等拥有迭代器对象的集合, 所以可以用于遍历。但是不能遍历对象,因为没有迭代器对象。
 
 ## 对象属性的遍历
 ES6 一共有 5 种方法可以遍历对象的属性。

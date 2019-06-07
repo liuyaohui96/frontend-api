@@ -1,5 +1,5 @@
 
-# 容器属性
+## 容器属性
 1. display: flex
 2. flex-direction: row | row-reverse | column | column-reverse
 3. justify-content: flex-start | flex-end | center | space-between |space-around space
@@ -13,7 +13,7 @@
 
 6. flex-flow: flex-direction flex-wrap
 
-# 项目属性
+## 项目属性
 1. flex: flex-grow flex-shrink flex-basis
 2. flex-basis: 原来大小
 3. flex-grow: 放大

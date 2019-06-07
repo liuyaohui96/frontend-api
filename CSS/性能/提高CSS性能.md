@@ -1,8 +1,6 @@
-1. 避免过度约束
-2. 避免后代选择符，避免链式选择符
-3. 避免不必要的重复，尽可能的精简规则，你可以合并不同类里的重复规则
-4. 避免！important，可以选择其他选择器
-5. 由于display的作用，某些样式组合会无效，正确使用display的属性
+1. 避免过度约束，避免不必要的重复，尽可能的精简规则，合并不同类里的重复规则
+2. 选择符:避免后代选择符，避免链式选择符;避免！important，可以选择其他选择器
+3. 由于display的作用，某些样式组合会无效，正确使用display的属性
   * display:inline后不应该再使用width、height、margin、padding以及float
   * display:inline-block后不应该再使用float
   * display:block后不应该再使用vertical-align

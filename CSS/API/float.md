@@ -8,3 +8,29 @@
 
 
 设置元素浮动后，该元素的 display 自动变成display:block
+
+
+## 去除浮动影响-防止父级高度塌陷
+1. 创建父级BFC
+  - 参考[BFC](../2BFC.md)
+
+2. 最后一个子元素应用.clear
+  ```css
+  .clear{
+    clear: both
+  }
+  ```
+
+3. 创建父容器类clearfix
+  ```css
+  .clearfix:after{
+    content: '';
+    height: 0;
+    clear: both;
+    display: block;
+    visibility: hidden;
+  }
+  ```
+
+4. 父级设置高度
+
