@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="height: 1000px"></div>
+  <div class="test">
+    <p>hello</p>
+    <p>world</p>
+    <p>!</p>
+  </div>
+  <div style="height: 1000px"></div>
+  <button>click</button>
+</body>
+<script>
+  const ediv = document.querySelector('.test')
+  const childList = ediv.children
+  console.log(childList)
+  let secondChild = childList[1]
+  console.log('child-length', ediv.childElementCount)
+  console.log(secondChild) // <p>world</p>
+  console.log(secondChild.previousElementSibling) // <p>hello</p>
+  console.log(secondChild.nextElementSibling) // <p>!</p>
+
+  const btn = document.querySelector('button')
+  btn.addEventListener('click', function (e) {
+    ediv.scrollIntoView()
+  })
+
+</script>
+
+</html>

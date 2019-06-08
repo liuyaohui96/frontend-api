@@ -1,5 +1,27 @@
 文档：https://juejin.im/post/5c8e6fa8e51d453ec75168cd
 
+## sessionStorage 、localStorage区别
+共同点：
+  * 都是保存在浏览器端，且都遵循同源策略。
+  * api基本一致
+    * setItem(key, value)
+
+    * getItem(key)
+
+    * removeItem(key)
+
+    * clear()
+
+不同点：在于生命周期与作用域的不同
+1. 生命周期
+localStorage 是持久化的本地存储，存储在其中的数据是永远不会过期, 需要用户自行删除， sessionStorage 是临时性的本地存储，它是会话级别的存储，当会话结束（页面被关闭）时，存储内容也随之被释放
+
+2. 存储范围。都是保存在浏览器端，且都遵循同源策略
+  * localStorage只要在相同的协议、相同的主机名、相同的端口下，就能读取/修改到同一份localStorage数据
+  * sessionStorage比localStorage更严苛一点，除了协议、主机名、端口外，还要求在同一窗口（也就是浏览器的标签页）下
+作用域：。
+
+## 概念
 1. cookies：通常用于存储用户身份，登录状态等。http 中自动携带， 体积上限为 4K， 可自行设置过期时间
   - Cookie 不够大
   - HTTP请求中的Cookie是明文传递的
@@ -24,15 +46,5 @@ cookie : 大小4KB 左右,跟随请求(请求头)，会占用带宽资源,但是
 
 sessionStorage和localStorage大同小异,大小看浏览器支持,一般为5MB,数据只保留在本地,不参与服务端交互
 
-## sessionStorage 、localStorage区别
-共同点：都是保存在浏览器端，且都遵循同源策略。
-不同点：在于生命周期与作用域的不同
 
-1. 生命周期
-localStorage 是持久化的本地存储，存储在其中的数据是永远不会过期, 需要用户自行删除， sessionStorage 是临时性的本地存储，它是会话级别的存储，当会话结束（页面被关闭）时，存储内容也随之被释放
-
-2. 存储范围。都是保存在浏览器端，且都遵循同源策略
-  * localStorage只要在相同的协议、相同的主机名、相同的端口下，就能读取/修改到同一份localStorage数据
-  * sessionStorage比localStorage更严苛一点，除了协议、主机名、端口外，还要求在同一窗口（也就是浏览器的标签页）下
-作用域：。
 

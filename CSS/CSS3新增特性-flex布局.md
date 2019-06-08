@@ -16,6 +16,7 @@
 ## 项目属性
 1. flex: flex-grow flex-shrink flex-basis
 2. flex-basis: 原来大小
+  * 默认值为 auto，即项目原来的大小。浏览器会根据这个属性来计算主轴是否有多余的空间
 3. flex-grow: 放大
 4. flex-shrink: 缩小
 5. order: [number]

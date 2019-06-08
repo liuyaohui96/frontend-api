@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  .left {
+    width: 100px;
+    height: 150px;
+    background-color: #FFB5BF;
+    font-size: 16px;
+  }
+
+  .right {
+    height: 150px;
+    background-color: #94E8FF;
+    font-size: 16px;
+  }
+
+  .container {
+    font-size: 0;
+    /* 消除间距 */
+  }
+
+  .left,
+  .right {
+    display: inline-block;
+  }
+
+  .right {
+    width: calc(100% - 100px);
+    /* 计算宽度，运算符号左右一定要有空格 */
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="left">left</div>
+    <div class="right">right</div>
+  </div>
+</body>
+
+</html>

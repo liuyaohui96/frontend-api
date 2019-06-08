@@ -1,3 +1,21 @@
+## requestAnimationFrame
+requestAnimationFrame(callback): 表示在重绘前执行指定的回调函数
+```js
+// demo
+let frame
+function callback(timeStamp) {
+  console.log(timeStamp) // 开始执行回调的时间戳
+  // 如果想要产生循环动画的效果, 需在回调函数中再次调用 requestAnimationFrame()
+  requestAnimationFrame(callback)
+}
+frame = requestAnimationFrame(callback) // 在下次重绘之前调用回调
+// 可以在销毁期的生命周期函数中执行以下函数
+componentWillUnMount() {
+  cancelAnimationFrame(frame)
+}
+```
+
+
 ## requestAnimationFrame 和 setTimeout/setInterval 有什么区别
 requestAnimationFrame 之前，我们主要使用 setTimeout/setInterval 来编写JS动画
 

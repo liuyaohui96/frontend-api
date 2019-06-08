@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  /* 左上角的水平半径是宽的一半，即 50%，
+  垂直半径就是元素的高度了，即 100%；
+  右上角和左上角是对称的，所以它们的水平半径垂直半径一样；
+  左下角和右下角没有构成圆，所以水平半径和垂直半径都为 0 */
+  .circle {
+    width: 100px;
+    height: 100px;
+    background-color: #FFB5BF;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  }
+</style>
+
+<body>
+  <div class="circle"></div>
+</body>
+
+</html>
