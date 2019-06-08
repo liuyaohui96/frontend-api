@@ -1,22 +1,30 @@
+Function.prototype._bind = function(context, ...argArr) {
+  let fn = this;
+  return function() {
+    fn.apply(context, argArr);
+  };
+};
+
 Function.prototype.bind = function(context, ...rest) {
-  let self = this
+  let self = this;
 
   // 为bound函数记忆原型对象
   function Fn() {}
-  Fn.prototype = this.prototype
+  Fn.prototype = this.prototype;
 
   let bound = function() {
     //bind传递的参数和函数调用时传递的参数拼接
-    return self.apply(context, rest)
-  }
+    return self.apply(context, rest);
+  };
   //原型链
-  bound.prototype = new Fn()
-  return bound
-}
+  bound.prototype = new Fn();
+  return bound;
+};
 
-var name = 'Jack'
+var name = 'Jack';
 function person(age, job, gender) {
-  console.log(this.name, age, job, gender)
+  console.log(this.name, age, job, gender);
 }
-var Yve = { name: 'Yvette' }
-let result = person.bind(Yve, 22, 'enginner')('female')
+var Yve = { name: 'Yvette' };
+person.bind(Yve, 22, 'enginner')('female');
+person._bind(Yve, 22, 'enginner')('female');
