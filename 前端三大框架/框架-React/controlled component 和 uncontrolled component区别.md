@@ -10,3 +10,5 @@ https://react.docschina.org/docs/uncontrolled-components.html
   - 在虚拟DOM节点上使用ref，并使用函数，将函数的参数挂载到实例的属性上
     - 例如 `ref={username=>this.username=username}`
   - 构造函数声明的方式。实例的构造函数constructor这创建一个ref,`React.createRef()`。虚拟DOM节点上声明一个ref属性，并且将创建好的实例的ref赋值给DOM节点的ref属性
+
+## 受控组件 vs 非受控组件
