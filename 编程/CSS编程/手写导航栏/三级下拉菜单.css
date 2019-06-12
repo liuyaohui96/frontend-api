@@ -1,0 +1,41 @@
+.list-style-none {
+  list-style: none;
+}
+
+ul.nav {
+  /* overflow: hidden; */
+  display: flow-root;
+}
+
+ul.nav li {
+  float: left;
+}
+ul.nav li > a {
+  display: block;
+  padding: 20px;
+  color: #555;
+  background-color: #eee;
+  text-decoration: none;
+}
+ul.nav li > a:hover {
+  color: #aaa;
+}
+/* ===== 子菜单设置 */
+li.show-nav2,
+li.show-nav3 {
+  position: relative;
+}
+ul.nav2 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+/* border */
+.border-right {
+  border-right: 1px solid #aaa;
+}
+.border-top {
+  border-top: 1px solid #aaa;
+}
