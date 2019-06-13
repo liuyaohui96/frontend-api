@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+.slidesshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* slides 模块 */
+.slides {
+  display: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.number-text {
+  position: absolute;
+  top: 0;
+  padding: 10px;
+
+  color: #fff;
+  font-size: 14px;
+}
+.caption-text {
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+  width: 100%;
+
+  color: #fff;
+  font-size: 18px;
+}
+/* 左右控制按钮 */
+.next,
+.prev {
+  position: absolute;
+  top: 50%;
+  padding: 20px;
+  margin-top: -30px;
+  border-radius: 0 3px 3px 0;
+  transition: 1s ease;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next:hover,
+.prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* dot*/
+.dot-group {
+  text-align: center;
+}
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0px 2px;
+  transition: 1s ease;
+}
+.dot:hover,
+.active {
+  background-color: #000;
+}
+
+/* fade 动画*/
+.fade {
+  animation: fade 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

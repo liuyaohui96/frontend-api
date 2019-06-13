@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* border-image属性使得元素的四个角定位到四个角 ，中间的部分重复 */
+    div.first {
+      /* 先设置border */
+      border: 10px solid transparent;
+      /* 再设置border-image */
+      border-image: url('border.png') 30 round;
+    }
+
+    div.second {
+      /* 先设置border */
+      border: 10px solid transparent;
+      /* 再设置border-image */
+      border-image: url('border.png') 30 stretch;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="first">图片边框 round</div>
+
+  <div class="second">图片边框 stretch</div>
+
+  <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_border-image3" target="_blank">更多例子</a>
+</body>
+
+</html>
