@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  height: 100%;
+}
+.bg1,
+.bg2,
+.bg3,
+.bg4 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50%;
+}
+.bg1 {
+  background-image: url(img1.jpg);
+}
+.bg2 {
+  background-image: url(img2.jpg);
+}
+.bg3 {
+  background-image: url(img3.jpg);
+}
+.bg4 {
+  background-image: url(img4.jpg);
+}
+
+.text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  border: 10px solid #fff;
+  padding: 20px 40px;
+}

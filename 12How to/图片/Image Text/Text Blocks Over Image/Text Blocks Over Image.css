@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: auto;
+}
+h2 {
+  text-align: center;
+}
+.container {
+  position: relative;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 0 20px;
+}
