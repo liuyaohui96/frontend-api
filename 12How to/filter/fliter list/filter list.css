@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+}
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+input {
+  padding: 6px 12px;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+button {
+  border: 1px solid #0077ff;
+  border-radius: 4px;
+  padding: 6px 12px;
+  line-height: 1.5;
+  font-size: 16px;
+  background-color: #0077ff;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.list-group {
+  list-style: none;
+  padding-left: 0;
+}
+.list-group-item {
+  padding: 12px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  cursor: pointer;
+  margin-bottom: -1px;
+}
+.list-group-item:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.list-group-item:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-left-radisu: 4px;
+}

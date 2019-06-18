@@ -14,6 +14,7 @@ null >= 0 // true
 // 加法
 true + 1 // 1
 undefined + 1 // NaN
+!"Lydia"; // false
 
 let obj = {};
 

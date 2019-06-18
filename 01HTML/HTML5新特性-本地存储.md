@@ -21,6 +21,8 @@ localStorage 是持久化的本地存储，存储在其中的数据是永远不�
   * sessionStorage比localStorage更严苛一点，除了协议、主机名、端口外，还要求在同一窗口（也就是浏览器的标签页）下
 作用域：。
 
+> 关闭选项卡后，将删除存储在sessionStorage中的数据,localStorage，数据将永远存在(除非认为删除)
+
 ## 概念
 1. cookies：通常用于存储用户身份，登录状态等。http 中自动携带， 体积上限为 4K， 可自行设置过期时间
   - Cookie 不够大
