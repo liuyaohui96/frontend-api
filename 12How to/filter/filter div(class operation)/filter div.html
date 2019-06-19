@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiter div</title>
+  <link rel="stylesheet" href="filter div.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <button class="btn active" onclick="filterDiv('all')">ShowAll</button>
+    <button class="btn" onclick="filterDiv('animal')">Animal</button>
+    <button class="btn" onclick="filterDiv('fruit')">Fruit</button>
+    <div class="div_container">
+      <div class="filterdiv animal dog">Dog</div>
+      <div class="filterdiv animal cat">Cat</div>
+      <div class="filterdiv fruit apple">Apple</div>
+      <div class="filterdiv fruit orange">orange</div>
+    </div>
+  </div>
+  <script src="filter div.js"></script>
+</body>
+
+</html>

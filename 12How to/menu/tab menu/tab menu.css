@@ -1,0 +1,31 @@
+.tab-menu {
+  width: 1000px;
+  margin: 20px auto;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 4px;
+}
+
+.tab-header {
+  background-color: rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+.tab-header button {
+  padding: 12px 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  float: left;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.tab-header button:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.tab-content {
+  display: none;
+  padding: 10px 20px;
+}
+.tab-header button.active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
