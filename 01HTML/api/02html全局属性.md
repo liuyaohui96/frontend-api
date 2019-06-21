@@ -1,20 +1,10 @@
-## 常用全局属性
-* id
-* class
-* style
-* data-*
-* width height
-* href(链接)
-* 图片
-  - stc
-  - alt
-  - title
-* 表单相关
-  - require
-  - name
-  - placeholder
-  - checked
-  - disabled
+1. id
+2. class
+3. style
+4. title
+5. data-*
+
+
 
 ## api
 - accesskey:设置快捷键，提供快速访问元素
@@ -33,3 +23,21 @@
 - tabindex: 设置元素可以获得焦点，通过tab可以导航
 - title: 元素相关的建议信息
 - translate: 元素和子孙节点内容是否需要本地化
+
+## 常用属性
+* id
+* class
+* style
+* data-*
+* width height
+* href(链接)
+* 图片
+  - stc
+  - alt
+  - title
+* 表单相关
+  - require
+  - name
+  - placeholder
+  - checked
+  - disabled

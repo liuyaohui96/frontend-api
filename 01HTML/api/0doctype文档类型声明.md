@@ -1,0 +1,10 @@
+`<!DOCTYPE>` 是文档类型声明。
+
+1. 位置：必须是html文档第一行，`<html>`元素之前。
+2. 作用：告诉web浏览器按照哪个版本html规范去解释html
+
+> 通过DOCTYPE来触发浏览器的标准模式。要是没有DOCTYPE的声明，那么浏览器就会进入怪异模式。兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作
+
+## 为什么HTML5里面我们不需要DTD（Document Type Definition文档类型定义）
+1. HTML 4.01 文档类型声明需要引用 DTD（Document Type Definition，文档类型定义），因为 HTML 4.01 基于 SGML（Standard Generalized Markup Language，通用标记语言）。
+2. HTML5 不基于 SGML，所以不需要引入 DTD。
