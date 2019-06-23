@@ -1,0 +1,49 @@
+.main {
+  transition: margin-left 0.5s ease-in-out;
+}
+h1 {
+  text-align: center;
+}
+.navbar-icon {
+  font-size: 40px;
+  cursor: pointer;
+}
+.overlay-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0px;
+  overflow-x: hidden;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+}
+.overlay-nav.show {
+  width: 250px;
+}
+.nav {
+  list-style: none;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.overlay-nav a {
+  text-decoration: none;
+  color: #bbb;
+  display: block;
+  font-size: 25px;
+  padding: 20px;
+}
+.overlay-nav a:hover {
+  color: #fff;
+}
+.close {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  color: #bbb;
+  font-size: 40px;
+  cursor: pointer;
+}
+.close:hover {
+  color: #fff;
+}
