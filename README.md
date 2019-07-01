@@ -9,7 +9,7 @@
   * Add **职业规划** module
 
 :basketall: 2019/6/27
-  * Set **编程习题** to **programming**
+  * add **practice**
 
 ### Reading Plan
 1. 《成功，动机与目标》
