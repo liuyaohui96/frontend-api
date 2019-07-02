@@ -1,4 +1,5 @@
-客户端 -- FIN --> 服务端， FIN—WAIT
-服务端 -- ACK --> 客户端， CLOSE-WAIT
-服务端 -- ACK,FIN --> 客户端， LAST-ACK
-客户端 -- ACK --> 服务端，CLOSED
+## TCP四次握手
+* 客户端 -- FIN --> 服务端， FIN—WAIT（客户端将不会发送数据）
+* 服务端 -- ACK --> 客户端， CLOSE-WAIT(服务端已经知道客户端不再发送数据)
+* 服务端 -- ACK,FIN --> 客户端， LAST-ACK（服务端将不会发送数据）
+* 客户端 -- ACK --> 服务端，CLOSED（客户端知道服务端不再发送数据）
