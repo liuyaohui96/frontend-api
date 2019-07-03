@@ -8,7 +8,7 @@
   * Add branch for JavaScript module, i.e DOM, BOM etc.
   * Add **职业规划** module
 
-:basketall: 2019/6/27
+:basketball: 2019/6/27
   * add **practice**
 
 ### Reading Plan
