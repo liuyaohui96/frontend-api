@@ -13,3 +13,30 @@ a 标签定义URL的链接（可以链接到其他页面，邮件，页面内的
   * _self 在当前标签打开
   * _parent 在父级环境打开，如没有，就以_self打开
   * _top 在top环境打开，如美哟u，以_self打开
+
+## 创建锚点链接
+```html
+<a href="#title">调转到title</a>
+<a href="#link">跳转到link</a>
+
+<!-- 使用 id 属性创建锚点 -->
+<h1 id="title">title</h1>
+<!-- 特殊地，在使用a元素创建锚点，可以使用 name 属性为其命名 -->
+<a name="link">链接</a> 
+```
+
+## 超链接的表现形式
+```html
+<!-- 普通超链接 -->
+<a href="http://www.example.com"></a>
+<!-- 锚点链接 -->
+<a href="#id"></a>
+<!-- 下载链接 -->
+<a href="example.txt"></a>
+<!-- 电子邮件链接 -->
+<a href="mailto:example@example.com"></a>
+<!-- 空链接，用于返回顶部 -->
+<a href=""></a>
+<!-- 实现代码功能的链接 -->
+<a href="javascript:void(0)"></a>
+```

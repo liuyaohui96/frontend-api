@@ -18,7 +18,7 @@ selectorGroup{
 1. simple selector
   * univaersal selector
   * type selector
-  * clasee selector
+  * class selector
   * id selector
   * attribute selector
     - [att] 根据attr,不管value如何

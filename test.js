@@ -1,3 +1,13 @@
-// 请编写sortStr方法，传入随机字符串，返回指定格式数组。
-// 具体要求：如输入aaadd,则返回[['a', 3], ['d': 2]]; 如输入bbcccaaaa，则返回[[a: 4], [c: 3], [b: 2]]。（输入的字符串仅限小写字母组成，且可忽略不同字母数量相同的情况）
-function sortStr(str) {}
+//
+function test(num) {
+  let rt = 0;
+  while (num != 0) {
+    let pop = num % 10;
+    num = Math.floor(num / 10);
+    rt = rt * 10 + pop;
+  }
+  return rt;
+}
+
+console.log(test(123));
+console.log(test(-123));
