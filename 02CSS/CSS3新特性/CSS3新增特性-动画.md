@@ -1,24 +1,6 @@
 参考文档： https://juejin.im/post/5cdd178ee51d456e811d279b
-## 动画api
-```css
-div{  
-  width: 40px;  
-  height: 40px;  
-  border-radius: 50%;  
-  background: #0ff;  
-  animation: move 2s linear 3 alternate both;
-}
-  
-  @keyframes move{  
-    0%{  
-      transform: translate(0,0);
-    }  
-    100%{    
-      transform: translate(200px,0);  
-    }
-  }
-```
 
+## animation
 animation: name time timing-function animation-iteration-count animation-direction fill-mode play-state
 
 * name: 动画名称
@@ -41,6 +23,29 @@ animation: name time timing-function animation-iteration-count animation-directi
 - skew(歪斜)
 - color/background-color
 - opacity
+
+
+
+## 简单例子
+```css
+div{  
+  width: 40px;  
+  height: 40px;  
+  border-radius: 50%;  
+  background: #0ff;  
+  animation: move 2s linear 3 alternate both;
+}
+  
+  @keyframes move{  
+    0%{  
+      transform: translate(0,0);
+    }  
+    100%{    
+      transform: translate(200px,0);  
+    }
+  }
+```
+
 
 ## 多个动画的顺序
 ```css
@@ -71,3 +76,13 @@ div{
 多数显示器默认频率是60Hz，即1秒刷新60次，
 
 每次刷新需要多少时间，即理论上最小间隔：为1000ms / 60 ＝ 16.7ms。
+
+## CSS3动画的优缺点
+优点：
+1. 代码简单
+2. 浏览器会对CSS3动画做一些优化
+
+缺点：
+1. 动画控制不够灵活
+2. 部分动画无法实现
+3. 兼容性不够好

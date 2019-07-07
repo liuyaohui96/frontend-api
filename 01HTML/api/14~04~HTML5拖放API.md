@@ -1,0 +1,4 @@
+## HTML5拖放API
+1. dropstart 事件将当前对象保留在全局
+2. dropover 防止默认事件触发
+3. drop 移除dropstart 保留的对象，增加到当前对象

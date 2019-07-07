@@ -12,7 +12,11 @@ a 标签定义URL的链接（可以链接到其他页面，邮件，页面内的
   * _blank 在新标签打开
   * _self 在当前标签打开
   * _parent 在父级环境打开，如没有，就以_self打开
-  * _top 在top环境打开，如美哟u，以_self打开
+  * _top 在top环境打开，如没有，以_self打开
+
+3. rel 指示链接页面与 当前网页的关系
+  * noopener 阻止在打开的页面拥有 window.opener 属性
+  * rel="nofollow" 无关系，点击链接无反应
 
 ## 创建锚点链接
 ```html

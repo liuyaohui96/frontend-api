@@ -12,32 +12,28 @@
 
 
 ## 新属性
-1. background相关
-  - background-clip（规定背景图的绘制区域）
-  - background-origin 规定背景图片的定位区域
-  - background-size 规定背景图片的尺寸
-  
-2. border
+1.  盒子模型
+  * box-sizing: content-box | border-box | inherit
+  * outline:outline-color outline-style outline-width outine-offset
+2. background相关
+  * background-clip（规定背景图的绘制区域）
+  * background-origin 规定背景图片的定位区域
+  * background-size 规定背景图片的尺寸
+3. border
   * border-radius  圆角半径
   * box-shadow
-
-
-3. 渐变 
+4. 渐变 
   * linear-gradient() 线性渐变
   * radial-gradient() 径向渐变
-4. 文本效果
+5. 文本效果
   * text-shadow 向文本添加阴影。
   * text-wrap 	规定文本的换行规则。
   * word-break 规定非中日韩文本的换行规则。
   * word-wrap 允许对长的不可分割的单词进行分割并换行到下一行。
-
-5. 字体
+6. 字体
   使用@font-face 规则中定义的字体
-6. 转换和变形
-7. 过渡
-8. 动画
-9. 盒子模型
-  - box-sizing: content-box | border-box | inherit
-  - outline:outline-color outline-style outline-width outine-offset
+7. 转换和变形(transform)
+8. 过渡(transition)
+9. 动画
 10. flex 布局
 11. 媒体查询
