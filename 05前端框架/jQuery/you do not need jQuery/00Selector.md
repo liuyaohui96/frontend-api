@@ -1,3 +1,5 @@
+参考：https://github.com/nefe/You-Dont-Need-jQuery
+
 # Query Selector
 使用document.querySelector 或 document.querySelectorAll 获取元素对象
 1. document.querySelector 返回第一个匹配的 element
