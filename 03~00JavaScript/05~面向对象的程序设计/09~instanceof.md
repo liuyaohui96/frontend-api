@@ -1,0 +1,43 @@
+## instanceof 实现
+
+```js
+// x instanceof y 内部实现
+while(x.__proto__ != null){
+  if(x.__proto__ == y.__ptoto__) return true
+  x.__proto__ = x.__proto__.__proto__
+}
+if(x.__proto__ == null) return false;
+```
+
+## instanceof 题目
+```js
+function Foo() {}
+/*任何函数都是Function的实例 ，包括它本身*/
+console.log(Object instanceof Function) // true
+console.log(Function instanceof Function) // true
+console.log(Foo instanceof Function) // true
+
+// Function.__proto__ === Object.prototype
+console.log(Function instanceof Object) // true
+
+// Object.__proto__ === Function.prototype
+// Function.prototype.__proto__ === Object.prototype
+console.log(Object instanceof Object) // true
+
+console.log(Object instanceof Foo) // false
+```
+
+## typeof和instanceof的区别
+1. 判断一个变量的类型尝尝会用 typeof 运算符, 特殊地，对于null，返回的是object，对于所有的对象，都是返回object
+2. instanceof 运算符用。
+对象是否为某个构造函数的实例。即**检查左边对象的原型链是否有右边构造函数的原型对象**。运算符的左边是实例对象，右边是构造函数。它会检查右边构建函数的原型对象（prototype），是否在左边对象的原型链上
+
+  ```js
+  p instanceof Person
+  // 等同于
+  Person.prototype.isPrototypeOf(p)
+
+  // 任何对象，除了null，都是Object的实例
+  p instanceof Object // true
+  null instanceof Object // true
+  ```
