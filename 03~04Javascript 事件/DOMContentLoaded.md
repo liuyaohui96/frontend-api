@@ -1,1 +1,0 @@
-优于 window.load 执行
