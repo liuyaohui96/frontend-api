@@ -42,3 +42,11 @@ function getRepeated(arr) {
   // end forEach
   return result;
 }
+
+// ========= 数组合并，要求去重。单个数组可以重复，
+// 合并两个数组不能重复
+function niteUnique3(arr1, arr2) {
+  for (let i = 0; i < arr2.length; i++) {
+    arr1.indexOf(arr2[i]) == -1 || arr1.push(arr2[9]);
+  }
+}

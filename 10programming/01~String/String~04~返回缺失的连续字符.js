@@ -1,5 +1,6 @@
 /**
  * @description return missing letter in continuous string
+ * @chinese 返回缺失的连续字符
  * @param {string} str
  * @return {string} the missing letter
  */

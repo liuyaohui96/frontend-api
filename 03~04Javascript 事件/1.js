@@ -1,16 +1,3 @@
-var btn = document.getElementById('myBtn');
-btn.addEventListener(
-  'click',
-  function() {
-    alert(this.id);
-  },
-  false
-);
-btn.removeEventListener(
-  'click',
-  function() {
-    //没有用！
-    alert(this.id);
-  },
-  false
-);
+console.log(parseInt('1', 0));
+console.log(parseInt('2', 1));
+console.log(parseInt('', 2));

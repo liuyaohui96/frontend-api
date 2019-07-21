@@ -17,6 +17,11 @@ approxEqual(0.1 + 0.2, 0.3) // true
   * 尾数位能表达的最大数字即尾数位都位1的情况
   * 1.111...X 21023 这个结果转换成十进制是1.7976931348623157e+308,这个结果即为`Number.MAX_VALUE`
 
+> 最大安全数字 `Number.MAX_SAFE_INTEGER`
+> 超出`Number.Max_value`的值为Infinity，超出了`Number.Min_value`的值为-Infinity
 
-3. 最大安全数字
-  JavaScript中Number.MAX_SAFE_INTEGER
+
+1. 最大安全数字
+  JavaScript中
+
+4. 
