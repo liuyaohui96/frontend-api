@@ -52,8 +52,9 @@
 <!-- =====class binding -->
 <div :class="[classA, classB]"></div>
 <div :class="[classA, { classB: isB, classC: isC }]">
-<div v-bind:class="classObject"></div>
 <div :class="{ red: isRed }"></div>
+<div v-bind:class="classObject"></div>
+
 
 
 <!-- ========style binding -->
