@@ -1,20 +1,19 @@
-相关联： Vue.filter()
+相关联知识： 全局Filter: `Vue.filter()`
 
-如果使用纯javascript就可以达到目的，就要避免使用filter这样的语法
+**如果使用纯javascript就可以达到目的，就要避免使用filter这样的语法**，过滤器应该用于简单的文本转换，如果有复杂的数据转换，应该使用计算属性
+
 ## filters
 1. 类型：Object
-2. 描述：定义可被Vue实例使用的 hash 过滤器(filters)
+2. 描述：定义可被Vue实例使用的 hash 过滤器(filters)。过滤器(filter) 用于文本的格式化
 
 
-
-
-## filters
-过滤器(filter) 用于文本的格式化。在以下两个地方很有用
+在以下两个地方具有应用场景
 1. 插值表达式 mustache interpretation
 2. v-bind expression
-```js
-// ===== 例子
+```html
+ <!-- ===== 例子 -->
 <!-- in mustaches -->
+<!-- 管道符号 | -->
 {{ message | capitalize }}
 
 <!-- in v-bind -->

@@ -23,6 +23,7 @@ v-model 为不同的表单元素使用不同的属性和触发不同的事件：
 v-model 通过监听相应的表单事件，修改相应的属性，然后将相应的值更新到绑定的数据上
 
 
+
 ## text
 ```html
 <input v-model="message" placeholder="edit me">

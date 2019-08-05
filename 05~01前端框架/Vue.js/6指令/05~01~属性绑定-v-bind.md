@@ -1,8 +1,8 @@
 
-## v-on
+## v-bind
 1. 缩写：`:`
 2. 期望：`any (with argument) | Object (without argument)`
-3. 参数：attrOrProp (optional)
+3. 参数：attrOrProp (optional) 动态绑定的属性
 4. 修饰符（详细见下面）
 5. 描述：动态绑定一个或多个属性；为组件定义prop
 
@@ -19,6 +19,7 @@
 <img v-bind:src="imageSrc">
 
 <!-- dynamic attribute name (2.6.0+) -->
+<!-- 动态属性绑定 -->
 <button v-bind:[key]="value"></button>
 
 <!-- shorthand -->
@@ -49,12 +50,14 @@
 ## class 和 style 的数组或对象绑定形式
 ```html
 <!-- class 和 style 的数组或对象绑定形式 -->
+<!-- class 与:class 可以共存合并 -->
 <!-- =====class binding -->
 <div :class="[classA, classB]"></div>
 <div :class="[classA, { classB: isB, classC: isC }]">
 <div :class="{ red: isRed }"></div>
-<div v-bind:class="classObject"></div>
-
+<div :class="classObject"></div>
+<!-- 当表达式过长或者逻辑复杂时可以使用计算属性 -->
+<div :class="computedProperty"></div>
 
 
 <!-- ========style binding -->
@@ -63,7 +66,9 @@
 如 transform，Vue.js 会自动侦测并添加相应的前缀 
 -->
 <div :style="{ fontSize: size + 'px' }"></div>
-<div v-bind:style="styleObject"></div>
+<div :style="styleObject"></div>
+<!-- style 数组语法不经常使用，因为往往写在一个对象里面 -->
+<!-- 数组内使用容纳多个对象 -->
 <div :style="[styleObjectA, styleObjectB]"></div>
 ```
 

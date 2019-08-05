@@ -6,16 +6,45 @@
 </head>
 <body>
     <div id="app">
-        {{message}}
+            <current-user>
+                    <template v-slot:default="slotProps">
+                      {{ slotProps.user.firstName }}
+                    </template>
+                  </current-user>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script>
+        var currentUser = {
+           data: function(){
+               return{
+                user: {
+                   firstName: '111',
+                   lastName: '222'
+               }
+               }
+           },
+            template: `
+            <span>
+  <slot v-bind:user="user">
+    {{ user.lastName }}
+  </slot>
+</span>
+            `
+        }
         var vm=new Vue({
            el:'#app',
            data:{
-            message: 'hello world'
+            message: 'hello world',
+            user: {
+                   firstName: 'liu0000',
+                   lastName: 'yaohui'
+               }
            },
-           methods:{}
+           methods:{},
+           components: {
+              
+               currentUser,
+           },
         });
     </script>
 </body>

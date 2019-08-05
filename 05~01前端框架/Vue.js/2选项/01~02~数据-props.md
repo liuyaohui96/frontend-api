@@ -77,9 +77,10 @@ Vue.component('blog-post', {
 ## 传递静态或者动态的prop
 ```html
 <!-- 静态的prop传递 -->
+<!-- 静态的prop始终都是以string形式传递 -->
 <blog-post title="My journey with Vue"></blog-post>
 
-<!-- 动态的prop传递 -->
+<!-- 动态的prop传递 根据父组件进行响应式变化-->
 <blog-post v-bind:title="post.title"></blog-post>
 
 
@@ -89,7 +90,7 @@ post: {
   title: 'My Journey with Vue'
 }
 <blog-post v-bind="post"></blog-post>
-// equal to
+<!-- equal to -->
 <blog-post
   v-bind:id="post.id"
   v-bind:title="post.title"
@@ -100,6 +101,7 @@ post: {
 所有props在父子组件之间形成一个单向下行绑定(one-way down binding): 父组件更新，更新流动到子组件，所有子组件的props都会更新，反过来则不行，这样可以避免子组件意外改变父组件的状态，这意味着你不能在组件内更新props，如果更新props，控制台会抛出警告。
 
 ```js
+// props 是只读的
 // 有两种方法可以模拟修改props:
 
 // === data 保存 props
@@ -142,7 +144,7 @@ class会进行合并
 ```
 
 
-## 组件跟元素禁用继承
+## 组件根元素禁用继承
 组件根元素禁用继承，可以在组件选项中使用`inheritAttrs: false`
 ```js
 Vue.component('my-component', {
