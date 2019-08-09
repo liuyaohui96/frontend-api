@@ -1,8 +1,3 @@
-let obj = {};
-obj.__proto__.valueOf = function() {
-  return 10;
-};
-obj.__proto__.toString = function() {
-  return 20;
-};
-console.log(Number(obj));
+let numbers = [1, 2, 3];
+numbers[10] = 1;
+console.log(numbers); // [ 1, 2, 3, <7 empty items>, 1 ]

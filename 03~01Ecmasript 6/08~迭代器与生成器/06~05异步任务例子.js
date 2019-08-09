@@ -41,7 +41,11 @@ function readFile(filename) {
 }
 
 run(function*() {
-  let contents = yield readFile('config.json');
+  let contents = yield readFile('./config.txt');
   doSomethingWith(contents);
   console.log('Done');
 });
+
+function doSomethingWith(contents) {
+  console.log(contents);
+}
