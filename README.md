@@ -1,4 +1,5 @@
 ### Plan
+* 19-8-9 promise
 * 19-8-7 event and event loop
 * generator
 
