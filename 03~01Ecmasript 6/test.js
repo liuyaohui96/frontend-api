@@ -1,8 +1,10 @@
-let ints = new Int16Array(2),
-  floats = new Float32Array(5);
+function factorial(n, p = 1) {
+  if (n <= 1) {
+    return 1 * p;
+  } else {
+    let result = n * p;
 
-console.log(ints.byteLength); // 4
-console.log(ints.length); // 2
-
-console.log(floats.byteLength); // 20
-console.log(floats.length); // 5
+    // optimized
+    return factorial(n - 1, result);
+  }
+}
