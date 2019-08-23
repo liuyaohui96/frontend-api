@@ -1,10 +1,11 @@
-function factorial(n, p = 1) {
-  if (n <= 1) {
-    return 1 * p;
-  } else {
-    let result = n * p;
-
-    // optimized
-    return factorial(n - 1, result);
+let person = {
+  // method
+  getGreeting() {
+    return 'Hello';
   }
+};
+
+// not a method
+function shareGreeting() {
+  return 'Hi!';
 }
