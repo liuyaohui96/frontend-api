@@ -1,5 +1,18 @@
 Vue.component('InputNumber', {
-  props: ['value', 'max', 'min'],
+  props: {
+    value: {
+      type: Number,
+      default: 0
+    },
+    max: {
+      type: Number,
+      default: Infinity
+    },
+    min: {
+      type: Number,
+      default: -Infinity
+    }
+  },
   data: function() {
     return {
       currentValue: this.value
