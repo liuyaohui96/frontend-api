@@ -1,27 +1,33 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
+  mode: 'development',
   entry: {
-    app: './src/index.js',
-    print: './src/print.js'
+    index: './src/index.js'
   },
   output: {
-    path: __dirname + '/dist',
-    filename: '[name].bundle.js'
+    filename: '[name].[contenthash].js',
+    path: __dirname + '/dist'
   },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.(jpg|jpeg|png|gif|svg)$/,
-        use: ['file-loader']
+  plugins: [
+    new HtmlWebpackPlugin({ title: 'Caching' }),
+    new CleanWebpackPlugin()
+  ],
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
       }
-    ]
+    }
   },
-  plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin()],
-  devtool: 'inline-source-map',
-  mode: 'development'
+  resolve: {
+    modules: [__dirname + '/node_modules']
+  }
 };

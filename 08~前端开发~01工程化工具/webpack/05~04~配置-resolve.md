@@ -46,12 +46,28 @@ resolve: {
 
 
 ## resolve.modules
-配置webpack去哪些目录下寻找第三方模块，默认只会去node_modules目录下寻找，
+配置webpack去哪些目录下寻找第三方模块，默认只会去node_modules目录下寻找。当前`./node_modules`找不到，就会去上一级目录`../node_modules`去寻找，以此类推。
 ```js
+// === default
+modules: ["node_modules"]
+
 // === 如果有大量的其他模块在需要在非node_modules目录下引入，需要自定义resove.modules模块下的规则
 resolve: {
   modules: ['./src/components', 'node_modules']
 }
+```
+
+## resolve.mainFileds
+当从 npm 包中导入模块时,此选项将决定在 package.json 中使用哪个字段作为入口文件的描述
+
+根据 webpack 配置中指定的 target 不同，默认值也会有所不同
+
+```js
+// === 当 target 属性设置为 webworker, web 或者没有指定
+mainFields: ["browser", "module", "main"]
+
+// === 对于其他任意的 target（包括 node）
+mainFields: ["module", "main"]
 ```
 
 ## resolve.descriptionFile

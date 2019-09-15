@@ -34,3 +34,6 @@ output: {
 path: path.resolve(__dirname, "public/assets"),
 publicPath: "https://cdn.example.com/assets/"
 ```
+
+## output.chunkFilename
+文件名需要在 runtime 根据 chunk 发送的请求去生成。因此，需要在 webpack runtime 输出 bundle 值时，将 chunk id 的值对应映射到占位符(如 [name] 和 [chunkhash])
