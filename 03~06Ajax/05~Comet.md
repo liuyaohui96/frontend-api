@@ -25,33 +25,9 @@ source.onmessage = function(event){
 // === 后续待编辑
 ```
 
+2. websocket，服务器的更新可以及时推送到客户端，而不需要客户端以一定的时间间隔去轮询。详细参考HTML5 api -  websocket
 
 
-2. websocket
-
-javascript 创建web socket 之后，会有一个HTTP请求发送到浏览器发起连接，取得服务器响应之后，建立的连接会将HTTP协议交换为web socket 协议，在URL上表现为`wss://`
-
-
-```js
-// === 创建一个websocket对象
-/*
-传入的URL参数必须是绝对垃圾ing
-同源策略对web socket 不适用，是否与某个域通信取决于服务器
-*/
-let socket = new WebSocket('ws://www.example.com/server.php');
-
-// === 关闭连接
-socket.close();
-
-// === 发送数据,只能发送纯文本数据，如果是复杂的数据需要借助JSON对象先进行序列化
-socket.send('hello world');
-
-/* === websocket 事件
-open 成功连接时触发
-error 发生错误时候触发
-close 关闭连接时触发
-*/
-socket.onopen = function(){}
-socket.onerror = function(){}
-socket.onclose = function(){}
-```
+## SSE 和 websockets选用因素
+1. 是否有建立和维护websocket的服务器，web socket 协议不同于http，SSE可以通过常规HTTP进行通信
+2. 是否需要双向通信，如果只是读取服务器数据，SSE实现比较容易，如果需要双向通信，则选用websocket
