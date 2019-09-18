@@ -1,4 +1,7 @@
 
+
+
+
 ## 动画属性
 ```css
 /* === 使用动画需要先定义@keyframes 动画规则 */
@@ -106,6 +109,15 @@ div{
   animation: move 2s linear forwards;
 }
 ```
+
+## transition 和 animation 的区别
+* transition 需要触发一个事件才能改变属性，而animation不需要触发任何事件都能够改变属性
+* transition只有开始和结束两个状态属性的设置，而animation可以设置多个帧。
+
+## javascript 动画和css3动画的区别
+1. javascript 动画更加全面
+2. css3 动画更加简单，浏览器自动进行优化
+3. css3 动画存在兼容性问题
 
 ## 动画最小时间间隔
 多数显示器默认频率是60Hz，即1秒刷新60次，
