@@ -32,6 +32,7 @@ console.log(subitems instanceof MyArray); // true
 
 ```js
 // several builtin types use species similar to this
+// 自定义类上模拟上面的内置类型的功能
 class MyClass {
   static get [Symbol.species]() {
     return this;
@@ -44,5 +45,61 @@ class MyClass {
     return new this.constructor[Symbol.species](this.value);
   }
 }
-
 ```
+
+所以，要使得以内置类型作为基类的自定义类返回基类类型，必须要重写Symbol.species
+```js
+class MyArray extends Array {
+  static get [Symbol.species]() {
+      return Array;
+  }
+}
+
+let items = new MyArray(1, 2, 3, 4);
+let subitems = items.slice(1, 3);
+
+console.log(items instanceof MyArray);      // true
+console.log(subitems instanceof Array);     // true
+console.log(subitems instanceof MyArray);   // false
+```
+
+## 例子
+```js
+
+class MyClass {
+  static get [Symbol.species]() {
+    return this;
+  }
+
+  constructor(value) {
+    this.value = value;
+  }
+
+  clone() {
+    return new this.constructor[Symbol.species](this.value);
+  }
+}
+
+class MyDerivedClass1 extends MyClass {
+  // empty
+}
+
+class MyDerivedClass2 extends MyClass {
+  static get [Symbol.species]() {
+    return MyClass;
+  }
+}
+
+let instance1 = new MyDerivedClass1('foo'),
+  clone1 = instance1.clone(),
+  instance2 = new MyDerivedClass2('bar'),
+  clone2 = instance2.clone();
+
+console.log(clone1 instanceof MyClass); // true
+console.log(clone1 instanceof MyDerivedClass1); // true
+console.log(clone2 instanceof MyClass); // true
+// MyDerivedClass2 继承了Myclass，但重写了Symbol.speices
+console.log(clone2 instanceof MyDerivedClass2); // false
+```
+
+
