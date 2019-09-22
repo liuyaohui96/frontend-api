@@ -9,7 +9,7 @@ Function.prototype._bind = function(context, ...argArr) {
   };
 };
 
-//  ======== 方式三
+//  ======== 方式三 考虑到原型链
 Function.prototype.bind = function(context, ...rest) {
   let self = this;
 
