@@ -25,6 +25,7 @@ function move(ele) {
 }
 
 // === checkBorderCollision function
+// 取反speed
 function checkBorderCollision(ele) {
   const eleStyle = getComputedStyle(ele);
   let left = parseFloat(eleStyle.left);
@@ -56,6 +57,7 @@ function checkBorderCollision(ele) {
 
 // === checkBlockCollision function
 // 两者中心的距离分别小于两者宽度和一半和两者高度和的一半
+// 交换speed
 function checkBlockCollision(ele, ele2) {
   const eleStyle = getComputedStyle(ele);
   let left = parseFloat(eleStyle.left);
@@ -80,6 +82,7 @@ function checkBlockCollision(ele, ele2) {
   let diffx = Math.abs(center.x - center2.x);
   let diffy = Math.abs(center.y - center2.y);
 
+  // 如果碰撞，交换他们的speed
   if (diffx < (w + w2) / 2 && diffy < (h + h2) / 2) {
     [ele.speedX, ele2.speedX] = [ele2.speedX, ele.speedX];
     [ele.speedY, ele2.speedY] = [ele2.speedY, ele.speedX];

@@ -1,5 +1,9 @@
 
 ## XHR DOM0级处理
+1. xhr.open()
+2. xhr.send()
+3. xhr.onreadystatechange
+4. xhr.onerror()
 ```js
 /*
 使用XHR对象，要调用的第一个方法是open， 启动一个xhr请求以备发送
