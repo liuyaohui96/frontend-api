@@ -1,11 +1,11 @@
 (function() {
   let slider;
-  let currrentIdx;
-  let sliderItems;
-  let len; // 个数
-  let sliderItemWidth; // 单个item宽度
   let sliderList;
+  let sliderItems;
+  let sliderItemWidth; // 单个item宽度
+  let len; // 个数
   let bullets;
+  let nextIdx;
   let timerId;
 
   init();
@@ -25,7 +25,7 @@
     len = sliderItems.length;
     sliderList.style.width = sliderItemWidth * len + 'px';
 
-    currrentIdx = 1; // 因为新增加了一张图片
+    nextIdx = 1; // 因为新增加了一张图片
     sliderList.style.left = -sliderItemWidth + 'px'; // 定位到第二张图片
 
     // 绑定事件
@@ -39,7 +39,7 @@
     bullets = document.querySelectorAll('.bullet');
     [...bullets].forEach((bullet, index) => {
       bullet.addEventListener('click', function() {
-        currrentIdx = index + 1;
+        nextIdx = index + 1;
         slideTo();
       });
     });
@@ -57,37 +57,41 @@
   }
 
   function slidePrev() {
-    currrentIdx--;
+    nextIdx--;
     slideTo();
   }
   function slideNext() {
-    currrentIdx++;
+    nextIdx++;
     slideTo();
   }
   function slideTo() {
-    //   前一张是最后一张图片，实际是第一张图片，下一张是第三张图片（实际第二张）
-    if (currrentIdx === len) {
-      currrentIdx = 2;
-      // 移动到第一张图片的位置
-      sliderList.style.left = -sliderItemWidth + 'px';
+    // 没有最后一张图片了，修正nextIdx
+    if (nextIdx === len) {
+      nextIdx = 2;
+      // 回到第二张图片的位置，第二张图片与最后一张图片相同，使得没有动画效果
+      sliderList.style.left = -sliderItemWidth + 'px'; //
     }
-    // 前一张图片是第一张图片，实际上是最后一张图片，下一张图片是倒数第三张（实际上是倒数第二张）
-    if (currrentIdx === -1) {
-      currrentIdx = len - 3;
+    // 没有前一张图片了，修正currentIdx为倒数第三个 len-3
+    if (nextIdx === -1) {
+      nextIdx = len - 3;
+      // 回到倒数第二张图片的位置，倒数第二张图片与最后一张图片相同，使得没有动画效果
       sliderList.style.left = -(len - 2) * sliderItemWidth + 'px';
     }
 
     let focusIndex;
-    if (currrentIdx == 0) {
+    // 第一张图片实际上聚焦最后一个bullet
+    if (nextIdx == 0) {
       focusIndex = bullets.length - 1;
-    } else if (currrentIdx == len - 1) {
+    } else if (nextIdx == len - 1) {
+      // 最后一张图片实际上聚焦的是第一个bullet
       focusIndex = 0;
     } else {
-      focusIndex = currrentIdx - 1;
+      focusIndex = nextIdx - 1;
     }
     document.querySelector('.focus').classList.remove('focus');
     bullets[focusIndex].classList.add('focus');
-    let left = -currrentIdx * sliderItemWidth;
+
+    let left = -nextIdx * sliderItemWidth;
     animate(sliderList, { left });
   }
   function auto() {
