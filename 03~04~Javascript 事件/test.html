@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <h1 id="h1" style="height:1000px;border: 1px solid #000">ff</h1>
+    <h1 style="height:1000px">ff</h1>
+    <script>
+      function $(selector) {
+        return document.querySelector(selector);
+      }
+      $('#h1').addEventListener('wheel', function(e) {
+        console.log('hh');
+      });
+    </script>
+  </body>
+</html>
