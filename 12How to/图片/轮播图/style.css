@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.slider-item {
+  display: none;
+}
+/* 图片大小设置为100% */
+.slider-item > img {
+  width: 100%;
+}
+
+/* prev & next */
+.prev,
+.next {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 16px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.725);
+}
+.next {
+  right: 0;
+}
+
+/* slider-number */
+.slider-number {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* slider-caption */
+.slider-caption {
+  position: absolute;
+  width: 100%;
+  /* left: 50%; */
+  bottom: 30%;
+  /* transform: translateX(-50%); */
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+
+/* pagination */
+.pagination {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pagination > .bullet {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+  cursor: pointer;
+}
+.pagination > .bullet:hover {
+  background-color: #777;
+}
+.pagination > .bullet.active {
+  background-color: #777;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade {
+  animation: fade 1.5s;
+}

@@ -1,5 +1,6 @@
 ## 三角形
 ```css
+/* width & height 为 0，则消除内部的空隙 */
 selector{
   width: 0;
   height: 0;
