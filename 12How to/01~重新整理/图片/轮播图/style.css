@@ -13,6 +13,7 @@ body {
 }
 /* 图片大小设置为100% */
 .slider-item > img {
+  display: block;
   width: 100%;
 }
 
@@ -49,9 +50,7 @@ body {
 .slider-caption {
   position: absolute;
   width: 100%;
-  /* left: 50%; */
   bottom: 30%;
-  /* transform: translateX(-50%); */
   text-align: center;
   color: #fff;
   font-size: 30px;

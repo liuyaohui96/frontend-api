@@ -7,13 +7,13 @@
   let bullets = document.querySelectorAll('.bullet');
   let prevIdx;
   let nextIdx;
+  let timerId;
   init();
   function init() {
     nextIdx = prevIdx = 0;
 
     // 初始化number&caption
     sliderNumber.textContent = nextIdx + 1 + '/' + len;
-    console.log(sliderCaption);
     sliderCaption.textContent = sliderItems[nextIdx]
       .querySelector('img')
       .getAttribute('alt');
@@ -32,6 +32,14 @@
     });
     document.querySelector('.next').addEventListener('click', function() {
       slideNext();
+    });
+
+    slider.addEventListener('mouseout', function() {
+      auto();
+    });
+    slider.addEventListener('mouseover', function() {
+      console.log('hhh');
+      clearInterval(timerId);
     });
   }
 
@@ -61,5 +69,12 @@
       .querySelector('img')
       .getAttribute('alt');
     sliderNumber.textContent = nextIdx + 1 + '/' + len;
+  }
+
+  function auto() {
+    clearInterval(timerId);
+    timerId = setInterval(() => {
+      slideNext();
+    }, 2000);
   }
 })();
