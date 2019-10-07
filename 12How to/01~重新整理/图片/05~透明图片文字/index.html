@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>透明图片文字</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .gallery {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        /* overflow: hidden; */
+      }
+      .gallery > img {
+        width: 100%;
+      }
+      .text {
+        color: #fff;
+        background: #000; /* fallback */
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        padding: 20px 40px;
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>透明图片文字</h1>
+    <div class="gallery">
+      <img src="notebook.jpg"" alt="" />
+      <div class="text">
+        <h2>标题</h2>
+        <p>
+          内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
