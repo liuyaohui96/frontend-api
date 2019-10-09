@@ -6,9 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="author" />
     <title>Document</title>
-    <style></style>
+    <style>
+      input:invalid {
+        border: 2px dashed red;
+      }
+
+      input:valid {
+        border: 2px solid black;
+      }
+    </style>
   </head>
   <body>
-    <ruby> 汉 <rp></rp><rt>han</rt><rp></rp></ruby>
+    <form>
+      <label for="choose">Would you prefer a banana or cherry?</label>
+      <input id="choose" name="i_like" required />
+      <button>Submit</button>
+    </form>
   </body>
 </html>
