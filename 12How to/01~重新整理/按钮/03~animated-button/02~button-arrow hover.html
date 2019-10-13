@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>arrow hover</title>
+    <style>
+      button {
+        background-color: #f4511e;
+        color: #fff;
+        padding: 26px 57px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 24px;
+        width: 200px;
+        transition: 0.5s;
+      }
+
+      button span::after {
+        content: '\00bb';
+        opacity: 0;
+        transition: 0.5s;
+      }
+      button:hover span::after {
+        padding-left: 15px;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <button><span>Hover</span></button>
+  </body>
+</html>

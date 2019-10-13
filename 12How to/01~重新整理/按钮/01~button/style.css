@@ -1,0 +1,89 @@
+button {
+  padding: 15px 32px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* === alert */
+.alert {
+  background-color: transparent;
+}
+.alert-success {
+  background-color: #4caf50;
+}
+
+.alert-info {
+  background-color: #2196f3;
+}
+
+.alert-warning {
+  background-color: #ff9800;
+}
+
+.alert-danger {
+  background-color: #f44336;
+}
+
+.alert-default {
+  background-color: #e7e7e7;
+}
+
+/* hover 样式略 */
+
+/* === outline */
+.outline {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.outline-success {
+  border-color: #4caf50;
+}
+
+.outline-info {
+  border-color: #2196f3;
+}
+
+.outline-warning {
+  border-color: #ff9800;
+}
+
+.outline-danger {
+  border-color: #f44336;
+}
+
+.outline-default {
+  border-color: #e7e7e7;
+}
+
+.outline-success:hover {
+  background-color: #4caf50;
+}
+
+.outline-info:hover {
+  background-color: #2196f3;
+}
+
+.outline-warning:hover {
+  background-color: #ff9800;
+}
+
+.outline-danger:hover {
+  background-color: #f44336;
+}
+
+.outline-default:hover {
+  background-color: #e7e7e7;
+}
+
+/* pill button */
+.pill {
+  border-radius: 16px;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+  background-color: #4caf50;
+}
