@@ -14,3 +14,12 @@ https://www.htmlsymbols.xyz/
 8. > &#8250; 比较小
 9.  << &laquo;    >>&raquo;
 
+
+```css
+.valid:before {
+  content: "✔";
+}
+.invalid:before {
+  content: "✖";
+}
+```

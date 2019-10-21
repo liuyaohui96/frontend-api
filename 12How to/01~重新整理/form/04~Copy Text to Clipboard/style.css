@@ -1,0 +1,42 @@
+.container {
+  width: 50%;
+  margin: 100px auto;
+}
+.board {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+}
+.bubble {
+  color: #fff;
+  background-color: #555555;
+  display: none;
+  border-radius: 8px;
+  padding: 16px 20px;
+  position: absolute;
+  top: -65px;
+  left: -65px;
+}
+
+/* === 制作三角形bubble */
+/* common 移动到左中 */
+.common {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.triangle {
+  bottom: -10px;
+  border-top: 10px solid #555555;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.conver {
+  bottom: -5px;
+  border-top: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}

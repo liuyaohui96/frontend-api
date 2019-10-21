@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #f1f1f1;
+}
+
+.register {
+  display: flow-root; /* 容纳浮动元素 */
+  width: 80%;
+  padding: 66px 40px 43px;
+  margin: 100px auto 0;
+  background: #fff;
+}
+.register h1 {
+  text-align: center;
+  margin-top: 0; /* 避免叠加边距到父容器 */
+}
+
+.register .tabs {
+  width: 100%;
+  /* overflow: auto; */
+}
+
+.register input {
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.register button {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  margin-top: 17px;
+  padding: 14px 20px;
+  float: right;
+  cursor: pointer;
+}
+.register .next {
+  color: #fff;
+  background: #4caf50;
+  margin-left: 4px;
+}
