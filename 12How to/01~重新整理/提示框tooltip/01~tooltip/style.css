@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.tooltip {
+  text-align: center;
+  position: relative;
+}
+
+.tooltip-text {
+  background: #555;
+  color: #fff;
+  line-height: 33px;
+  border-radius: 6px;
+  margin-left: -65px; /* 相对居中 */
+  width: 130px;
+  height: 33px;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+/* 三角框 */
+.tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: 5px solid #555;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  opacity: 1;
+}

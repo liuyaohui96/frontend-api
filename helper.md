@@ -12,3 +12,10 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
 <p>1. ES5使用对象模拟Set和Map的实现</p>
 <p>2. ES5使用对象模拟Set和Map的局限性</p>
 </div>
+
+## box-shadow
+```css
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+```
+

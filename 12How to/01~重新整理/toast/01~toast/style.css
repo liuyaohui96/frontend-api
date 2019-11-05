@@ -1,0 +1,42 @@
+button {
+  background: #333;
+  color: #fff;
+  padding: 13px 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.toast {
+  background: #333;
+  color: #fff;
+  padding: 22px 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.toast.show {
+  animation: fadeIn 3s, fadeOut 0.5s 3s;
+}
+@keyframes fadeIn {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 20px;
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    bottom: 20px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

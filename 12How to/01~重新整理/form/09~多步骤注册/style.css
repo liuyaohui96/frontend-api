@@ -44,3 +44,28 @@ body {
   background: #4caf50;
   margin-left: 4px;
 }
+.register .prev {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* circles */
+.register .circles {
+  text-align: center;
+  margin-top: 103px;
+}
+
+.circles .circle {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #ddd;
+}
+
+.circles .active {
+  background: #4caf50;
+}

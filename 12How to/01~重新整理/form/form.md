@@ -21,3 +21,10 @@ input.addEventListener("keyup", function(event) {
 });
 ```
 
+
+## filter
+* filter input
+* filter table
+* filter box
+
+

@@ -1,0 +1,10 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li::before {
+  content: '\2022';
+  color: red;
+  margin-right: 10px;
+}
