@@ -1,0 +1,14 @@
+
+学习了javascript基础后的项目练习
+
+https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator
+
+
+
+第二部分后
+https://developer.mozilla.org/zh-CN/docs/learn/JavaScript/Building_blocks/%E7%9B%B8%E7%89%87%E8%B5%B0%E5%BB%8A
+
+
+
+学习对象初始后
+https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features
