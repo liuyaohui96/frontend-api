@@ -1,0 +1,39 @@
+
+## 块级声明
+块级声明的变量仅在声明所在的作用域内可以被访问。块级作用域通常在以下情况被创建：
+1. 函数内部
+2. 代码块内部（花括号包裹）
+
+块级声明的关键字是`let | const`
+
+## let 声明和const声明
+let 声明和const 声明都是块级声明，但const用于常量的声明
+
+所有的const 声明都是需要在声明时进行初始化，试图对const声明的常量进行赋值会抛出`TypeError`错误。。const 声明对象变量，并不会阻止对象变量成员的修改
+
+
+> 常量：常量不可以通过重新赋值改变其值，也不可以在代码运行时重新声明。它必须被初始化为某个值。
+
+
+```js
+const foo = 'bar';
+foo = 'baz'; // 'TypeError'
+
+// === const 与对象
+const person = {
+  name: "liu"
+};
+// works
+person.name = "liuyaohui";
+// throws an error
+person = {
+  name: "liuyaohui"
+};
+```
+
+## 块级声明不允许重复声明
+**同一个块级作用域**，块级声明不允许重复声明,试图这样做会跑出一个`SyntaxError`
+```js
+let foo = 'bar';
+let foo = 'baz'; // 'SyntaxError'
+```

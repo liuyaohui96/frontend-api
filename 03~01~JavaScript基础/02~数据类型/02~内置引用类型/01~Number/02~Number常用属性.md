@@ -8,4 +8,6 @@ Number.MIN_SAFE_INTEGER
 
 Number.POSITIVE_INFINITY // 正无穷值，溢出时返回
 Number.NEGATIVE_INFINITY  // 负无穷值，溢出时返回
+
+Number.NaN // 与NaN一致
 ```

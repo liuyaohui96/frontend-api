@@ -15,6 +15,7 @@ let person = {
 };
 
 // Object.defineProperty中使用symbol值作为对象属性
+// firstName 是一个symbol类型变量
 Object.defineProperty(person, firstName, { writable: false });
 
 let lastName = Symbol('last name');
