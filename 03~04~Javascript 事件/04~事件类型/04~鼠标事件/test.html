@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <style>
+       .box{
+         width: 100px;
+         height: 100px;
+         position: absolute;
+         left: 100px;
+         top: 100px;
+       }
+    </style>
   </head>
   <body>
-    <h1>hello world</h1>
-    <h1 id="h1" style="height:1000px;border: 1px solid #000">ff</h1>
-    <h1 style="height:1000px">ff</h1>
+    <a href="b.html">b</a>
+    <div class="box"></div>
     <script>
-      function $(selector) {
-        return document.querySelector(selector);
-      }
-      $('#h1').addEventListener('wheel', function(e) {
-        console.log('hh');
+      document.addEventListener('click', function(e) {
+        console.log(e.screenX);
       });
     </script>
   </body>
