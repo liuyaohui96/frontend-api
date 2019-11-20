@@ -4,7 +4,7 @@
 2. ParentNode.firstElementChild & ParentNode.lastElementChild
 
 ## ParentNode.children 
-ParentNode.children 是一个只读属性，返回 一个Node的子elements ，是一个动态更新的 HTMLCollection
+ParentNode.children 是一个只读属性，返回一个实时HTMLCollection，其中包含调用该节点的节点的所有子元素(child element)
 
 ```js
 // 返回的对象类型为 HTMLCollection
