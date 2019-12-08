@@ -2,7 +2,9 @@
 ## Window对象方法-媒体查询
 Window.matchMedia()返回一个新的MediaQueryList 对象，表示指定的媒体查询字符串解析后的结果
 
-然后，可以使用返回的MediaQueryList确定文档是否与媒体查询匹配，或者监视文档以检测它何时匹配或停止匹配媒体查询
+然后，可以使用返回的MediaQueryList的方法确定文档是否与媒体查询匹配，或者监视文档以检测它何时匹配或停止匹配媒体查询。
+
+更详细查看CSS布局-响应式布局-媒体查询部分
 ```js
 const mediaQueryList = window.matchMedia(mediaQueryString)
 
@@ -23,23 +25,6 @@ function screenTest(e) {
   }
 }
 
+// 持续观察查询结果值的变化,需要在MediaQueryList对象上使用 addListener() 方法
 mql.addListener(screenTest);
 ```
-
-
-## MediaQueryList 对象
-MediaQueryList 参考：https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
-
-MediaQueryList 对象的方法与属性：
-1. MediaQueryList.matches ：MediaQueryList接口的matchs只读属性是一个布尔值，如果文档当前与媒体查询列表匹配，则返回true，否则返回false
-
-    ```js
-    // === MediaQueryList.matches 例子
-    let mql = window.matchMedia('(max-width: 600px)');
-
-    if(mql.matches) {
-    // media query test returning true
-    }
-    ```
-
-2. MediaQueryList.media: 将媒体查询以序列化的DOMString返回
