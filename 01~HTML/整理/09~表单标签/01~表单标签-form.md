@@ -1,0 +1,39 @@
+## 表单标签
+```html
+<!-- 
+form 属性：
+1. name: 表单名称
+2. action:  表单提交数据的URL，可以是相对或绝对地址
+3. method：提交表单的方法
+4. autocomplete: 浏览器是否自动输入
+5. enctype: 
+  * enctype="application/x-www-form-urlencoded" 默认值
+  * enctype="text/plain"
+  * enctype="multipart/form-data" 推荐使用
+6. novalidate: 定义浏览器再提交时，不进行验证
+ -->
+<form action="post" action="/foo" autocomplete novalidate>
+</form>
+```
+
+## action 属性
+action属性指定发送数据要去的位置。它的值必须是一个有效的URL。如果没有提供此属性，则数据将被发送到包含这个表单的页面的URL
+
+##  method属性
+最常见的是GET方法和POST方法(详细见HTTP部分)
+
+## encype属性
+定义 MIME type，只有在post method 才产生效果，指定在提交表单时所生成的请求中的Content-Type的HTTP数据头的值
+
+认情况下，它的值是application/x-www-form-urlencoded。它的意思是：已编码为URL参数的表单数据
+
+如果想要发送文件，需要做以下工作：
+1. 将method属性设置为POST，因为文件内容不能放入URL参数中
+2. 将enctype的值设置为multipart/form-data，因为数据将被分成多个部分，每个文件单独占用一个部分，表单body中包含的文本数据也要占用一个部分（如果文本也输入到表单中）
+3. 包含文本控件
+
+
+## 表单操作中常见问题
+1. XSS & CSRF （见网络安全部分）
+2. sql注入 （见网络安全部分）
+3. 其他
