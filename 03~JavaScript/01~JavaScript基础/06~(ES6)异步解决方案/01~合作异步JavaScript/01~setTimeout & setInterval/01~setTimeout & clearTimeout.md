@@ -25,4 +25,6 @@ setTimeout(function(arg1){}.bind(undefined, 10), 1000);
 ```
 
 ## SetTimeout的实际延时比设定值更久
-SetTimeout的实际延时比设定值更久的原因：最小延迟时间。在浏览器中，setTimeout()/setInterval() 的每调用一次定时器的最小间隔是4ms，这通常是由于函数嵌套导致或者是由于已经执行的setInterval的回调函数阻塞导致的
+SetTimeout的实际延时比设定值更久的原因：setTimeout() 只是将事件插入了“任务队列”，必须等当前代码（执行栈）执行完，主线程才会去执行它指定的回调函数。要是当前代码消耗时间很长，也有可能要等很久，所以并没办法保证回调函数一定会在 setTimeout() 指定的时间执行。所以， setTimeout() 的第二个参数表示的是最少时间，并非是确切时间。
+
+HTML5标准规定了 setTimeout() 的第二个参数的最小值不得小于4毫秒，如果低于这个值，则默认是4毫秒
