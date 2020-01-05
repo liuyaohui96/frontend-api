@@ -6,7 +6,7 @@
 
 客户区大小的属性有两个：clientWidth 和 clientHeight：
 1. Element.clientWidth:只读属性,表示元素的内部宽度，等于content宽度加上左右padding宽度，不包括垂直滚动条（如果有）、边框和外边距
-2. Element.clientHeight: 只读属性，表示元素的内部高度，等于content宽度加上左右padding宽度，不包括水平滚动条高度（如果有）、边框和外边距
+2. Element.clientHeight: 只读属性，表示元素的内部高度，等于content宽度加上上下padding宽度，不包括水平滚动条高度（如果有）、边框和外边距
 ```js
 // intElemClientWidth 返回值会四舍五入为一个整数 
 

@@ -2,6 +2,7 @@
 ## Array.prototype.map
 Array.prototype.map() 迭代数组，筛选数组的项，返回callback返回值为true的数组项组成的新数组
 
+map 方法会给原数组中的每个元素都按顺序调用一次  callback 函数`Array.prototype.map(func)`
 ```js
 // 迭代数组，将callback返回值作为新数组返回
 Array.prototype.map(item [, index [, array]])[, thisArg])
