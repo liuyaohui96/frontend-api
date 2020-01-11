@@ -1,4 +1,6 @@
-Vuex allows us to divide our store into modules. Each module can contain its own state, mutations, actions, getters, and even nested modules
+
+## module
+Vuex 允许将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割
 
 ```js
 const moduleA = {
@@ -21,9 +23,11 @@ const store = new Vuex.Store({
   }
 })
 
-store.state.a // -> `moduleA`'s state
-store.state.b // -> `moduleB`'s state
+store.state.a // -> moduleA 的状态
+store.state.b // -> moduleB 的状态
 ```
+
+对于模块内部的 mutation 和 getter，接收的第一个参数是模块的局部状态对象。
 
 ## # Module Local State
 Inside a module's mutations and getters, the first argument received will be the module's local state.
