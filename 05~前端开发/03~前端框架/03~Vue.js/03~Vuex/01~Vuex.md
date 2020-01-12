@@ -9,4 +9,3 @@ Vuex 用于为 Vue.js 应用程序管理状态，采用集中式存储管理应�
 * mutation
 * action
 * module
-    
