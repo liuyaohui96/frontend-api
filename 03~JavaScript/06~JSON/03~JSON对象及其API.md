@@ -1,17 +1,14 @@
+
 ## JSON对象
-早期的JSON解析器基本是使用JavaScript的eval()函数，使用eval函数求值存在风险，可能会执行一些恶意代码。所以，ECMAScript5定义了全局对象JSON
+早期的JSON解析器基本是使用JavaScript的eval()函数，使用eval函数求值存在风险，可能会执行一些恶意代码。所以，ECMAScript5定义了全局对象JSON。
+
+* JSON.stringify(objectFromClient)：将浏览器的javascript对象转换为JSON格式
+
+* JSON.parse(jsonFromServer)：将服务器的JSON数据转换为javascript对象
+
 
 ```js
-/* === JSON.stringify(objectFromClient)
-将浏览器的javascript对象转换为JSON格式
-*/
-
-
-/* === JSON.parse(jsonFromServer) 
-将服务器的JSON数据转换为javascript对象
-*/
-
-/* === 对于JSON对象的属性访问,修改，删除，遍历与javascript一样*/
+/* === JSON对象的属性访问,修改，删除，遍历与javascript一样*/
 myObj = { "name":"John", "age":30, "car":null };
 myObj.name; // john
 myObj["name"]; // john

@@ -43,11 +43,11 @@
 
 
 ## HTML5新增功能API
-Media API 
-Text Track API 
-Application Cache API 
-User InteractionAPL 
-Data Transfer APL 
-Command API 
-Constraint Validation API
-History API
+* Media API 
+* Text Track API 
+* Application Cache API 
+* User InteractionAPL 
+* Data Transfer APL 
+* Command API 
+* Constraint Validation API
+* History API
