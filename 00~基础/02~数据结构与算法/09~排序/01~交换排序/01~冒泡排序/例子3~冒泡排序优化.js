@@ -1,8 +1,8 @@
 function bubbleSort(arr) {
   if (arr.length < 2) return;
-  let flag = true; // 判断是否有序，有序则退出
   // end > 0 表示end在首个元素前终止
-  for (let end = arr.length - 1; end > 0 && flag; end--) {
+  // flag 判断是否有序，有序则退出
+  for (let end = arr.length - 1, flag = true; end > 0 && flag; end--) {
     flag = false;
     // i从 0 到 end-1
     for (let i = 0; i < end; i++) {
