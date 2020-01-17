@@ -1,11 +1,7 @@
 function shellSort(arr) {
   if (arr.length < 2) return;
 
-  for (
-    let gap = Math.floor(arr.length / 2);
-    gap > 0;
-    gap = Math.floor(gap / 2)
-  ) {
+  for (let gap = ~~(arr.length / 2); gap > 0; gap = ~~(gap / 2)) {
     // 假设gap后是未排好序的序列
     for (let i = gap; i < arr.length; i++) {
       // 迭代排好序的序列，分别与后面的项比较

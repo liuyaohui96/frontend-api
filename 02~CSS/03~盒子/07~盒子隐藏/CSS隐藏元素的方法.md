@@ -7,8 +7,9 @@
 * `z-index: -10000` 设置z-index值使其它元素遮盖该元素也算是一种隐藏
 * `transform: scale(0,0)`
 * `margin-left: -100%`
-* `position: relative; left: -100%`
+* `position: relative; left: -100%` & `position:absolute; left:-9999px` 置于屏幕之外
 * `overflow: hidden`  隐藏元素溢出部分，占据空间,无法响应点击事件
+* `text-index: -9999px`: 只适用于block元素中的文本
 
 ## opacity: 0 & visibility: hidden & display: none 的区别
 1. 是否占据空间：

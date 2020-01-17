@@ -1,7 +1,7 @@
 
 文档参考： https://github.com/postcss/postcss/tree/master/docs
 ## POSTCSS
-用 JavaScript 工具和插件转换 CSS 代码的工具，实现一些工程化操作，如：
+POSTCSS 是用 JavaScript 工具和插件转换 CSS 代码的工具，实现一些工程化操作，如：
 1. 为CSS规则添加浏览器厂商前缀
 2. 代码合并
 3. 代码压缩

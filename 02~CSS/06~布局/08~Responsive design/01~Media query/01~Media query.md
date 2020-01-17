@@ -1,6 +1,6 @@
 
 ## Media query
-媒体查询可以根据设备类型（例如print screen)，设备特征和参数（例如屏幕分辨率和浏览器适口宽度）来调整网站的布局
+媒体查询可以根据设备类型（例如`print|screen`)，设备特征和参数（例如屏幕分辨率和浏览器适口宽度）来调整网站的布局
 
 Media query的使用方式
 1. CSS @media 和 @import

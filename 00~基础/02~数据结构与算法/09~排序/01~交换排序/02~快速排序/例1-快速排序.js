@@ -1,26 +1,25 @@
-function quickSort(arr, low, high) {
-  if (low < high) {
-    let pivot = partition(arr, low, high);
-    quickSort(arr, low, pivot - 1);
-    quickSort(arr, pivot + 1, high);
+function quickSort(arr, left, right) {
+  if (left < right) {
+    let pivot = partition(arr, left, right);
+    quickSort(arr, left, pivot - 1);
+    quickSort(arr, pivot + 1, right);
   }
-  return arr;
 }
 
-function partition(arr, low, high) {
-  let pivot = arr[high]; // 选择最后一个数作为pivot
+function partition(arr, left, right) {
+  // 选择最后一个数作为pivot
   // 用于存储最后一个更小值的位置，方便位置移动一位得到一个更大值与迭代过程中的更小值交换
-  let i = low - 1;
-  for (let j = low; j < high; j++) {
+  let i = left - 1;
+  for (let j = left; j < right; j++) {
     // 找到一个更小值，将前一个更小值位置移动一位交换
-    if (arr[j] < pivot) {
+    if (arr[j] < arr[right]) {
       i++;
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     // 迭代过程中，大于等于pivot的值不用做操作
   }
   // 迭代结束后，交换基准值与较小值位置后一位的指定值
-  [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+  [arr[i + 1], arr[right]] = [arr[right], arr[i + 1]];
   return i + 1;
 }
 

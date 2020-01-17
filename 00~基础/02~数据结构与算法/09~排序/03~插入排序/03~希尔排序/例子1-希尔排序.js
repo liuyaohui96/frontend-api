@@ -6,7 +6,7 @@ function shellSort(arr) {
     gap = gap * 3 + 1;
   }
 
-  for (; gap > 0; gap = Math.floor(gap / 3)) {
+  for (; gap > 0; gap = ~~(gap / 3)) {
     // 假设gap后是未排好序的序列
     for (let i = gap; i < arr.length; i++) {
       // 迭代排好序的序列，分别与后面的项比较
@@ -17,6 +17,7 @@ function shellSort(arr) {
   }
 }
 
+// === 测试
 let arr = [9, 5, 2, 7];
 let arr2 = [3, 2, 8, 7];
 shellSort(arr);
