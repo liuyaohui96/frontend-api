@@ -1,6 +1,3 @@
-
-## 对象与数组混合解构
-```js
 let person = {
   name: 'liu',
   hobbies: ['play football', 'read book']
@@ -11,4 +8,3 @@ let {
   hobbies: [firstHobby]
 } = person;
 console.log(name, firstHobby); // liu play football
-```

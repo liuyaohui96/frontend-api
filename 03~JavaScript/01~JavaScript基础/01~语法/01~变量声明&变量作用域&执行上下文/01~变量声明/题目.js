@@ -7,3 +7,13 @@ function test() {
   }
 }
 test();
+
+// ===
+var num = 10;
+var num = 20;
+console.log(num); // 20
+
+// ===
+let numbers = [1, 2, 3];
+numbers[10] = 1;
+numbers; // [ 1, 2, 3, <7 empty items>, 1 ]

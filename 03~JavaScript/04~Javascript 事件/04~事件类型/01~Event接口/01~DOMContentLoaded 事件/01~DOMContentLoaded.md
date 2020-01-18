@@ -24,7 +24,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 ## load 与 DOMContentLoaded的区别：
-
 1. load: 页面的html、css、js、图片等资源都已经加载完之后才会触发 load 事件
 2. DOMContentLoaded: HTML下载、解析完毕之后就触发
 
