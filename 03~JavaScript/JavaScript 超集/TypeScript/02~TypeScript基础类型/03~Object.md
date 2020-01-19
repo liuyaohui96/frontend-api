@@ -1,6 +1,6 @@
 
 ## Object
-object 表示 引用类型
+object 表示引用类型
 
 ```js
 declare function create(o: object | null): void;
