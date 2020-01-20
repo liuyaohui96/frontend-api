@@ -1,2 +1,17 @@
-let list: number[] = [1, 2, 3];
-console.log(list[3]);
+interface Bird {
+  fly();
+  layEggs();
+}
+
+interface Fish {
+  swim();
+  layEggs();
+}
+
+function getSmallPet(): Fish | Bird {
+  // ...
+}
+
+let pet = getSmallPet();
+pet.layEggs(); // okay
+pet.swim(); // errors

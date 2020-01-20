@@ -1,6 +1,6 @@
 
 ## 剩余参数
-剩余参数（rest parameter）由三个点(`...`)紧跟一个具名参数组成，这个参数在函数内表现为`数组`
+剩余参数（rest parameter）语法是`...restParaName`，剩余参数在函数内表现为`数组`
 ```js
 // === 指定对象和对象属性，复制对象属性的函数，使用剩余参数改写如下
 function pick(object, ...keys) {
