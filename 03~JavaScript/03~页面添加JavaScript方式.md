@@ -1,4 +1,9 @@
 
+## 页面添加JavaScript方式
+1. 内部JavaScript
+2. 外部JavaScript
+3. 内部JavaScript处理器
+
 ## 内部JavaScript
 ```html
 <body>
