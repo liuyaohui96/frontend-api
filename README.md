@@ -11,7 +11,6 @@
 
 :basketball: Before 2019/6/26
   * Add branch for JavaScript module, i.e DOM, BOM etc.
-  * Add **职业规划** module
 
 :basketball: 2019/6/27
   * add **practice**
